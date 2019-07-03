@@ -1,4 +1,4 @@
-# lambda-go
+# go-lambda-proxy
 A simple Go AWS Lambda utility package and template for API Gateway accesible implementations
 
 # Use
