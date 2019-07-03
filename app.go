@@ -16,7 +16,7 @@ type Executor func(context.Context) (interface{}, error)
 //ProxyFunction receives an executor and returns an APIGatewayProxyResponse with json marshalled body and error return
 func ProxyFunction(f Executor) func(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
 	return func(request events.APIGatewayProxyRequest) (events.APIGatewayProxyResponse, error) {
-		statusResponse := http.StatusBadRequest
+		statusResponse := http.StatusInternalServerError
 		ctx, cancel := context.WithCancel(context.Background())
 		defer cancel()
 
