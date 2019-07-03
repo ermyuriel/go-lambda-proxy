@@ -1,5 +1,5 @@
 # lambda-go
-A Go AWS Lambda utility package for API Gateway accesible implementations
+A simple Go AWS Lambda utility package and template for API Gateway accesible implementations
 
 # Use
 
