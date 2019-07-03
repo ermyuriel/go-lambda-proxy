@@ -18,4 +18,6 @@ That's it.
 
 # Why
 
-This repository was made mostly just to make my life easier, any suggestions or corrections are very welcome.
+This repository was made mostly just to make my life easier and development of single purpose lambda APIs faster.
+
+Any suggestions or corrections are very welcome.
