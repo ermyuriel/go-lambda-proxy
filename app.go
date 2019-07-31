@@ -20,7 +20,7 @@ func ProxyFunction(f Executor) func(request events.APIGatewayProxyRequest) (even
 		ctx, cancel := context.WithCancel(context.Background())
 		defer cancel()
 
-		ctx = context.WithValue(ctx, contextKey("request"), request)
+		ctx = context.WithValue(ctx, contextKey("request"), &request)
 
 		result, err := f(ctx)
 		if err == nil {
