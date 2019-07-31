@@ -8,7 +8,7 @@ import (
 	"github.com/aws/aws-lambda-go/events"
 )
 
-type contextKey string
+type ContextKey string
 
 //Executor is an alias for func(context.Context) (interface{}, error). Inside the function, you will find a context with an events.APIGatewayProxyRequest value identified with key "request"
 type Executor func(context.Context) (interface{}, error)
@@ -20,7 +20,7 @@ func ProxyFunction(f Executor) func(request events.APIGatewayProxyRequest) (even
 		ctx, cancel := context.WithCancel(context.Background())
 		defer cancel()
 
-		ctx = context.WithValue(ctx, contextKey("request"), &request)
+		ctx = context.WithValue(ctx, ContextKey("request"), &request)
 
 		result, err := f(ctx)
 		if err == nil {
