@@ -5,7 +5,7 @@ A simple Go AWS Lambda utility package and template for API Gateway accesible im
 
 ```go
 func f(ctx *context.Context) (interface{},error){
-    //Define the function you want the API to execute here
+    //Define the flow you want the API to execute here. You will find the request function inside the Context with a "request" key
 }
 
 
